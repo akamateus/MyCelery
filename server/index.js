@@ -11,6 +11,8 @@ import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
 import { register } from "./controllers/auth.js";
 import userRoutes from "./controllers/auth.js";
+import postRoutes from "./routes/post.js";
+import { verifyToken } from "./middleware/auth.js";
 
 // ⬇️ Configs - middleware ⬇️
 
@@ -45,6 +47,7 @@ app.post("/auth/register", upload.single("picture"), register);
 // Routes
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 // ⬇️ Setup Mongoose ⬇️
 
