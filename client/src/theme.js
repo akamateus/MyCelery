@@ -1,4 +1,4 @@
-// color design tokens
+// color design hex - yellow palette 👌🏽
 export const colorHex = {
   mono: {
     0: "#FFFFFF",
