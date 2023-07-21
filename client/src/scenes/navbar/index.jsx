@@ -9,19 +9,15 @@ import {
   FormControl,
   useTheme,
   useMediaQuery,
-  Menu,
 } from "@mui/material";
 import {
-  PersonSearchIcon,
-  TextsmsIcon,
-  EmojiObjectsTwoToneIcon,
-  EmojiObjectsRoundedIcon,
-  NotificationsIcon,
-  InfoIcon,
-  WidgetsIcon,
-  CloseIcon,
-  Brightness4Icon,
+  PersonSearch,
+  Textsms,
+  Notifications,
+  Info,
+  Widgets,
   Close,
+  Brightness4,
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
@@ -70,7 +66,7 @@ const Navbar = () => {
           >
             <InputBase placeholder="do u have friends?" />
             <IconButton>
-              <PersonSearchIcon />
+              <PersonSearch />
             </IconButton>
           </FlexBoxBetween>
         )}
@@ -82,14 +78,14 @@ const Navbar = () => {
         <FlexBoxBetween gap="3rem">
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
-              <Brightness4Icon sx={{ fontSize: "25px" }} />
+              <Brightness4 sx={{ fontSize: "25px" }} />
             ) : (
-              <Brightness4Icon sx={{ color: dark, fontSize: "25px" }} />
+              <Brightness4 sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <TextsmsIcon sx={{ fontSize: "25px" }} />
-          <NotificationsIcon sx={{ fontSize: "25px" }} />
-          <InfoIcon sx={{ fontSize: "25px" }} />
+          <Textsms sx={{ fontSize: "25px" }} />
+          <Notifications sx={{ fontSize: "25px" }} />
+          <Info sx={{ fontSize: "25px" }} />
           {/* dropdown on topright ⬇️*/}
           <FormControl variant="standard" value={fullName}>
             <Select
@@ -124,7 +120,7 @@ const Navbar = () => {
         <IconButton
           onclick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
         >
-          <Menu />
+          <Widgets />
         </IconButton>
       )}
       {/* PHONE NAV⬇️ */}
@@ -144,7 +140,7 @@ const Navbar = () => {
             <IconButton
               onclick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
             >
-              <CloseIcon />
+              <Close />
             </IconButton>
           </Box>
           {/* Menu items -copied logic from pc nav, changed some properties in the first FlexBoxBetween ⬇️*/}
@@ -161,14 +157,14 @@ const Navbar = () => {
               sx={{ fontSize: "25px" }}
             >
               {theme.palette.mode === "dark" ? (
-                <Brightness4Icon sx={{ fontSize: "25px" }} />
+                <Brightness4 sx={{ fontSize: "25px" }} />
               ) : (
-                <Brightness4Icon sx={{ color: dark, fontSize: "25px" }} />
+                <Brightness4 sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <TextsmsIcon sx={{ fontSize: "25px" }} />
-            <NotificationsIcon sx={{ fontSize: "25px" }} />
-            <InfoIcon sx={{ fontSize: "25px" }} />
+            <Textsms sx={{ fontSize: "25px" }} />
+            <Notifications sx={{ fontSize: "25px" }} />
+            <Info sx={{ fontSize: "25px" }} />
             {/* dropdown on topright ⬇️*/}
             <FormControl variant="standard" value={fullName}>
               <Select
