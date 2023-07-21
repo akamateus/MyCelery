@@ -65,7 +65,7 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    // Add data only one time ☠️ check on MongoDB
+    // Add data only one time for tests ☠️ check on MongoDB
     // User.insertMany(users);
     // Post.insertMany(posts);
   })
