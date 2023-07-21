@@ -78,9 +78,9 @@ const Navbar = () => {
         <FlexBoxBetween gap="3rem">
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
-              <Brightness4 sx={{ fontSize: "25px" }} />
+              <Brightness4 Icon sx={{ fontSize: "25px" }} />
             ) : (
-              <Brightness4 sx={{ color: dark, fontSize: "25px" }} />
+              <Brightness4 Icon sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
           <Textsms sx={{ fontSize: "25px" }} />
@@ -157,9 +157,9 @@ const Navbar = () => {
               sx={{ fontSize: "25px" }}
             >
               {theme.palette.mode === "dark" ? (
-                <Brightness4 sx={{ fontSize: "25px" }} />
+                <Brightness4 Icon sx={{ fontSize: "25px" }} />
               ) : (
-                <Brightness4 sx={{ color: dark, fontSize: "25px" }} />
+                <Brightness4 Icon sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
             <Textsms sx={{ fontSize: "25px" }} />
