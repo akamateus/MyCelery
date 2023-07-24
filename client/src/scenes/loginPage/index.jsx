@@ -23,7 +23,13 @@ const LoginPage = () => {
         borderRadius="1.5rem"
         backgroundColor={theme.palette.background.alt}
       >
-        <Typography font fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
+        <Typography
+          justifyContent="center"
+          font
+          fontWeight="500"
+          variant="h5"
+          sx={{ mb: "1.5rem" }}
+        >
           {" "}
           Nothing to do? Let's gossip 💅🏽{" "}
         </Typography>

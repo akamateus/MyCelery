@@ -23,6 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBoxBetween from "components/FlexBoxBetween";
+// import CeleryIcon from "components/CeleryIcon";
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -38,8 +39,8 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  //User variable⬇️
-  const fullName = `${user.firstName} ${user.lastName}`;
+  //User variable⬇️ change values of "fullname" for const
+  // const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
     <FlexBoxBetween padding="1rem 6%" backgroundColor={alt}>
@@ -55,12 +56,13 @@ const Navbar = () => {
             },
           }}
         >
-          MyCrew
+          MyCrew🏴‍☠️
         </Typography>
         {isNotMobileScreens && (
           <FlexBoxBetween
+            alignItems="center"
             backgroundColor={neutralLight}
-            borderRadius="9px"
+            borderRadius="5px"
             gap="3rem"
             padding="0.1rem 1.5rem"
           >
@@ -83,13 +85,13 @@ const Navbar = () => {
               <Brightness4 Icon sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Textsms sx={{ fontSize: "25px" }} />
+          {/* <Textsms sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
-          <Info sx={{ fontSize: "25px" }} />
+          <Info sx={{ fontSize: "25px" }} /> */}
           {/* dropdown on topright ⬇️*/}
-          <FormControl variant="standard" value={fullName}>
+          <FormControl variant="standard" value={"fullName"}>
             <Select
-              value={fullName}
+              value={"fullName"}
               sx={{
                 backgroundColor: neutralLight,
                 width: "150px",
@@ -107,10 +109,10 @@ const Navbar = () => {
               input={<InputBase />}
             >
               {/* button within dropdown ⬇️*/}
-              <MenuItem value={fullName}>
-                <Typography>{fullName}</Typography>
+              <MenuItem value={"fullName"}>
+                <Typography>{"fullName"}</Typography>
               </MenuItem>
-              <MenuItem onclick={() => dispatch(setLogout())}>
+              <MenuItem onClick={() => dispatch(setLogout())}>
                 Leave 🏃🏽‍♀️💨
               </MenuItem>
             </Select>
@@ -118,7 +120,7 @@ const Navbar = () => {
         </FlexBoxBetween>
       ) : (
         <IconButton
-          onclick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+          onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
         >
           <Widgets />
         </IconButton>
@@ -138,7 +140,7 @@ const Navbar = () => {
           {/* Close icon⬇️ */}
           <Box display="flex" justifyContent="flex-end" p="1rem">
             <IconButton
-              onclick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+              onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
             >
               <Close />
             </IconButton>
@@ -166,9 +168,9 @@ const Navbar = () => {
             <Notifications sx={{ fontSize: "25px" }} />
             <Info sx={{ fontSize: "25px" }} />
             {/* dropdown on topright ⬇️*/}
-            <FormControl variant="standard" value={fullName}>
+            <FormControl variant="standard" value={"fullName"}>
               <Select
-                value={fullName}
+                value={"fullName"}
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -186,10 +188,10 @@ const Navbar = () => {
                 input={<InputBase />}
               >
                 {/* button within dropdown ⬇️*/}
-                <MenuItem value={fullName}>
-                  <Typography>{fullName}</Typography>
+                <MenuItem value={"fullName"}>
+                  <Typography>{"fullName"}</Typography>
                 </MenuItem>
-                <MenuItem onclick={() => dispatch(setLogout())}>
+                <MenuItem onClick={() => dispatch(setLogout())}>
                   Leave 🏃🏽‍♀️💨
                 </MenuItem>
               </Select>

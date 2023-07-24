@@ -152,6 +152,39 @@ const Form = () => {
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
                 />
+                <Box
+                  gridColumn="span 4"
+                  border={`1pc solid ${palette.neutral.medium}`}
+                  borderRadius="5px"
+                  padding="1rem"
+                >
+                  <Dropzone
+                    acceptedFiles=".jpg,.jpeg,.png"
+                    multiple={false}
+                    onDrop={(acceptedFiles) =>
+                      setFieldValue("picture", acceptedFiles[0])
+                    }
+                  >
+                    {({ getRootProps, getInputProps }) => (
+                      <Box
+                        {...getRootProps()}
+                        border={`2px dashed ${palette.primary.main}`}
+                        padding="1rem"
+                        // sx={{ "&:hover": { cursor: "pointer" } }}
+                      >
+                        <input {...getInputProps()} />
+                        {!values.picture ? (
+                          <p>Add picture here</p>
+                        ) : (
+                          <FlexBoxBetween>
+                            <Typography>{values.picture.name}</Typography>
+                            <EditOutlinedIcon />
+                          </FlexBoxBetween>
+                        )}
+                      </Box>
+                    )}
+                  </Dropzone>
+                </Box>
                 <TextField
                   label="Location"
                   onBlur={handleBlur}
@@ -174,39 +207,6 @@ const Form = () => {
                   helperText={touched.occupation && errors.occupation}
                   sx={{ gridColumn: "span 4" }}
                 />
-                <Box
-                  gridColumn="span 4"
-                  border={`1pc solid ${palette.neutral.medium}`}
-                  borderRadius="5px"
-                  padding="1rem"
-                >
-                  <Dropzone
-                    acceptedFiles=".jpg,.jpeg,.png"
-                    multiple={false}
-                    onDrop={(acceptedFiles) =>
-                      setFieldValue("picture", acceptedFiles[0])
-                    }
-                  >
-                    {({ getRootProps, getInputProps }) => (
-                      <Box
-                        {...getRootProps()}
-                        border={`2px dashed ${palette.primary.main}`}
-                        padding="1rem"
-                        sx={{ "&:hover": { cursor: "pointer" } }}
-                      >
-                        <input {...getInputProps()} />
-                        {!values.picture ? (
-                          <p>Add picture here</p>
-                        ) : (
-                          <FlexBoxBetween>
-                            <Typography>{values.picture.name}</Typography>
-                            <EditOutlinedIcon />
-                          </FlexBoxBetween>
-                        )}
-                      </Box>
-                    )}
-                  </Dropzone>
-                </Box>
               </>
             )}
 
