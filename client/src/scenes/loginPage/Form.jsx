@@ -263,7 +263,7 @@ const Form = () => {
                 },
               }}
             >
-              {isLogin ? "Sign up here, buddy" : "Login here, buddy"}
+              {isLogin ? "Sign up here ✍🏽" : "Login here ✅"}
             </Typography>
           </Box>
         </form>
