@@ -11,7 +11,7 @@ import {
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { useNavigate } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogin } from "state";
 import Dropzone from "react-dropzone";
@@ -58,7 +58,7 @@ const Form = () => {
   const isRegister = pageType === "register";
 
   const register = async (values, onSubmitProps) => {
-    //this allow us to send form info with image
+    //this allow to send form info with image
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
