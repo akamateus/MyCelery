@@ -40,7 +40,7 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   //User variable⬇️ change values of "fullname" for const
-  // const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
     <FlexBoxBetween padding="1rem 6%" backgroundColor={alt}>
@@ -89,9 +89,9 @@ const Navbar = () => {
           <Notifications sx={{ fontSize: "25px" }} />
           <Info sx={{ fontSize: "25px" }} /> */}
           {/* dropdown on topright ⬇️*/}
-          <FormControl variant="standard" value={"fullName"}>
+          <FormControl variant="standard" value={fullName}>
             <Select
-              value={"fullName"}
+              value={fullName}
               sx={{
                 backgroundColor: neutralLight,
                 width: "150px",
@@ -109,8 +109,8 @@ const Navbar = () => {
               input={<InputBase />}
             >
               {/* button within dropdown ⬇️*/}
-              <MenuItem value={"fullName"}>
-                <Typography>{"fullName"}</Typography>
+              <MenuItem value={fullName}>
+                <Typography>{fullName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>
                 Leave 🏃🏽‍♀️💨
@@ -168,9 +168,9 @@ const Navbar = () => {
             <Notifications sx={{ fontSize: "25px" }} />
             <Info sx={{ fontSize: "25px" }} />
             {/* dropdown on topright ⬇️*/}
-            <FormControl variant="standard" value={"fullName"}>
+            <FormControl variant="standard" value={fullName}>
               <Select
-                value={"fullName"}
+                value={fullName}
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -188,8 +188,8 @@ const Navbar = () => {
                 input={<InputBase />}
               >
                 {/* button within dropdown ⬇️*/}
-                <MenuItem value={"fullName"}>
-                  <Typography>{"fullName"}</Typography>
+                <MenuItem value={fullName}>
+                  <Typography>{fullName}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
                   Leave 🏃🏽‍♀️💨
