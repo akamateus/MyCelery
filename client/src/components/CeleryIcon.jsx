@@ -1,9 +1,9 @@
 import * as React from "react";
-import { SvgIcon } from "@material-ui/core";
+import { Svg } from "@material-ui/core";
 
 export default function CeleryIcon(props) {
   return (
-    <SvgIcon {...props}>
+    <Svg {...props}>
       <path
         d="M965 1338 c-20 -23 -26 -40 -23 -64 4 -31 3 -32 -27 -27 -24 4 -39
 -1 -62 -21 -38 -32 -45 -67 -23 -111 l18 -35 -67 -48 c-36 -27 -124 -88 -196
@@ -18,6 +18,6 @@ export default function CeleryIcon(props) {
 -229 -323 -290 -363 -52 -35 -80 -38 -98 -10 -8 14 -6 26 9 55 24 43 481 511
 490 501 4 -4 -46 -86 -111 -183z"
       />
-    </SvgIcon>
+    </Svg>
   );
 }
