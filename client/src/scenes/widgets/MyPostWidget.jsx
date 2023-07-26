@@ -6,7 +6,6 @@ import {
   ImageOutlined,
   MicOutlined,
   MoreHorizOutlined,
-  PaletteRounded,
 } from "@mui/icons-material";
 import {
   Box,
@@ -119,6 +118,51 @@ const MyPostWidget = ({ picturePath }) => {
         </Box>
       )}
       <Divider sx={{ margin: "1.25rem 0" }} />
+      <FlexBoxBetween>
+        <FlexBoxBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
+          <ImageOutlined sx={{ color: mediumMain }} />
+          <Typography
+            color={mediumMain}
+            sx={{ "&:hover": { cursor: "pointer", color: medium } }}
+          >
+            Image
+          </Typography>
+        </FlexBoxBetween>
+        {isNotMobileScreen ? (
+          <>
+            <FlexBoxBetween gap="0.25rem">
+              <GifBoxOutlined sx={{ color: mediumMain }} />
+              <Typography color={mediumMain}>Clip</Typography>
+            </FlexBoxBetween>
+
+            <FlexBoxBetween gap="0.25rem">
+              <AttachFileOutlined sx={{ color: mediumMain }} />
+              <Typography color={mediumMain}>Attachment</Typography>
+            </FlexBoxBetween>
+
+            <FlexBoxBetween gap="0.25rem">
+              <MicOutlined sx={{ color: mediumMain }} />
+              <Typography color={mediumMain}>Audio</Typography>
+            </FlexBoxBetween>
+          </>
+        ) : (
+          <FlexBoxBetween gap="0.25rem">
+            <MoreHorizOutlined sx={{ color: mediumMain }} />
+          </FlexBoxBetween>
+        )}
+
+        <Button
+          disabled={!post}
+          onClick={handlePost}
+          sx={{
+            color: palette.background.alt,
+            backgroundColor: palette.primary.main,
+            borderRadius: "3rem",
+          }}
+        >
+          POST
+        </Button>
+      </FlexBoxBetween>
     </WidgetWrapper>
   );
 };
