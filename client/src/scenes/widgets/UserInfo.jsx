@@ -1,13 +1,13 @@
-import UserPic from "components/UserPic";
-import FlexBoxBetween from "components/FlexBoxBetween";
-import WidgetWrapper from "components/WidgetWrapper";
-import { Box, Typography, Divider, useTheme } from "@mui/material";
 import {
   ManageAccountsOutlined,
   EditOutlined,
   WorkOutlineOutlined,
   LocalActivityOutlined,
 } from "@mui/icons-material";
+import UserPic from "components/UserPic";
+import FlexBoxBetween from "components/FlexBoxBetween";
+import WidgetWrapper from "components/WidgetWrapper";
+import { Box, Typography, Divider, useTheme } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

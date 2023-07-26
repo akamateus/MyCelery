@@ -13,7 +13,7 @@ const LoginPage = () => {
         textAlign="center"
       >
         <Typography fontSize="32px" color="primary">
-          MyCrew 🏴‍☠️
+          MyCelery
         </Typography>
       </Box>
       <Box
@@ -23,15 +23,8 @@ const LoginPage = () => {
         borderRadius="1.5rem"
         backgroundColor={theme.palette.background.alt}
       >
-        <Typography
-          justifyContent="center"
-          font
-          fontWeight="500"
-          variant="h5"
-          sx={{ mb: "1.5rem" }}
-        >
-          {" "}
-          Nothing to do? Let's gossip 💅🏽{" "}
+        <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
+          Miss the Celery buddies? No prob 😗
         </Typography>
         <Form />
       </Box>

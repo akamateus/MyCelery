@@ -56,11 +56,10 @@ const Navbar = () => {
             },
           }}
         >
-          MyCrew🏴‍☠️
+          MyCelery
         </Typography>
         {isNotMobileScreens && (
           <FlexBoxBetween
-            alignItems="center"
             backgroundColor={neutralLight}
             borderRadius="5px"
             gap="3rem"
