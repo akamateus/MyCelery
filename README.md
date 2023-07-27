@@ -1,4 +1,4 @@
-- MyCrew: Sailing Together, Apart!
+- MyCelery: Sailing Together, Apart!
 
 Ahoy there! 🏴‍☠️
 
